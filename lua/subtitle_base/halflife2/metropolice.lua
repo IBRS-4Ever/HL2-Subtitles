@@ -1,180 +1,6 @@
 if SERVER then return end
 Subtitle_Base_Table = Subtitle_Base_Table or {} -- don't touch
 
-local MapName = game.GetMap()
-local PoliceNames = { 
-	"#MetropoliceSubtitle_Name.Defender",
-	"#MetropoliceSubtitle_Name.Hero",
-	"#MetropoliceSubtitle_Name.Jury",
-	"#MetropoliceSubtitle_Name.King",
-	"#MetropoliceSubtitle_Name.Line",
-	"#MetropoliceSubtitle_Name.Patrol",
-	"#MetropoliceSubtitle_Name.Quick",
-	"#MetropoliceSubtitle_Name.Roller",
-	"#MetropoliceSubtitle_Name.Stick",
-	"#MetropoliceSubtitle_Name.Tap",
-	"#MetropoliceSubtitle_Name.Union",
-	"#MetropoliceSubtitle_Name.Victor",
-	"#MetropoliceSubtitle_Name.Xray",
-	"#MetropoliceSubtitle_Name.Yellow",
-	"#MetropoliceSubtitle_Name.Vice",
-}
-
-local MapNameCallOuts = {
-	["default"] = {
-		"#MetropoliceSubtitle_Map.Block",
-		"#MetropoliceSubtitle_Map.Zone",
-		"#MetropoliceSubtitle_Map.Sector",
-	},
-	["trainstation"] = {
-		"#MetropoliceSubtitle_Map.StationBlock",
-		"#MetropoliceSubtitle_Map.TransitBlock",
-		"#MetropoliceSubtitle_Map.WorkforceIntake",
-	},
-	["canals"] = {
-		"#MetropoliceSubtitle_Map.CanalBlock",
-		"#MetropoliceSubtitle_Map.StormSystem",
-		"#MetropoliceSubtitle_Map.WasteRiver",
-		"#MetropoliceSubtitle_Map.DeservicedArea",
-	},
-	["eli"] = {
-		"#MetropoliceSubtitle_Map.IndustrialZone",
-		"#MetropoliceSubtitle_Map.RestrictedBlock",
-		"#MetropoliceSubtitle_Map.RepurposedArea",
-	},
-	["town"] = {
-		"#MetropoliceSubtitle_Map.CondemnedZone",
-		"#MetropoliceSubtitle_Map.InfestedZone",
-		"#MetropoliceSubtitle_Map.NonPatrolRegion",
-	},
-	["coast"] = {
-		"#MetropoliceSubtitle_Map.ExternalJurisDiction",
-		"#MetropoliceSubtitle_Map.StabilizationJurisDiction",
-		"#MetropoliceSubtitle_Map.OutlandZone",
-	},
-	["prison"] = {
-		"#MetropoliceSubtitle_Map.ExternalJurisDiction",
-		"#MetropoliceSubtitle_Map.StabilizationJurisDiction",
-	},
-	["c17"] = {
-		"#MetropoliceSubtitle_Map.ResidentialBlock",
-		"#MetropoliceSubtitle_Map.404Zone",
-		"#MetropoliceSubtitle_Map.DistributionBlock",
-		"#MetropoliceSubtitle_Map.ProductionBlock",
-	},
-	["citadel"] = {
-		"#MetropoliceSubtitle_Map.HighPriorityRegion",
-		"#MetropoliceSubtitle_Map.TerminalRestrictionZone",
-		"#MetropoliceSubtitle_Map.ControlSection",
-	},
-}
-
-local SuspectNames = {
-	["default"] = {
-		"#MetropoliceSubtitle_Suspect.Subject",
-	},
-	["trainstation"] = {
-		"#MetropoliceSubtitle_Suspect.Citizen",
-		"#MetropoliceSubtitle_Suspect.UPI",
-		"#MetropoliceSubtitle_Suspect.Subject",
-	},
-	["canals"] = {
-		"#MetropoliceSubtitle_Suspect.Subject",
-		"#MetropoliceSubtitle_Suspect.NonCitizen",
-		"#MetropoliceSubtitle_Suspect.Sociocide",
-		"#MetropoliceSubtitle_Suspect.Anticitizen",
-	},
-	["eli"] = {
-		"#MetropoliceSubtitle_Suspect.Subject",
-		"#MetropoliceSubtitle_Suspect.Anticitizen",
-	},
-	["town"] = {
-		"#MetropoliceSubtitle_Suspect.Freeman",
-		"#MetropoliceSubtitle_Suspect.Subject",
-		"#MetropoliceSubtitle_Suspect.Anticitizen",
-	},
-	["coast"] = {
-		"#MetropoliceSubtitle_Suspect.Freeman",
-		"#MetropoliceSubtitle_Suspect.Sociocide",
-	},
-	["prison"] = {
-		"#MetropoliceSubtitle_Suspect.Freeman",
-		"#MetropoliceSubtitle_Suspect.Infection",
-	},
-	["c17"] = {
-		"#MetropoliceSubtitle_Suspect.Freeman",
-	},
-	["citadel"] = {
-		"#MetropoliceSubtitle_Suspect.Freeman",
-	},
-}
-
-local Crimes = {
-	"#MetropoliceSubtitle_Crime.CriminalTrespass63",
-	"#MetropoliceSubtitle_Crime.NonSanctionedArson51",
-	"#MetropoliceSubtitle_Crime.Posession69",
-	"#MetropoliceSubtitle_Crime.PublicNonCompliance507",
-	"#MetropoliceSubtitle_Crime.RecklessOperation99",
-	"#MetropoliceSubtitle_Crime.ResistingPacification148",
-	"#MetropoliceSubtitle_Crime.Riot404",
-	"#MetropoliceSubtitle_Crime.Fugitive17F",
-	"#MetropoliceSubtitle_Crime.Weapon94",
-	"#MetropoliceSubtitle_Crime.Alarms62",
-	"#MetropoliceSubtitle_Crime.Assault243",
-	"#MetropoliceSubtitle_Crime.IllegalCarrying95",
-	"#MetropoliceSubtitle_Crime.UnlawfulEntry603",
-}
-
-local Punishment = {
-	"#MetropoliceSubtitle_Punish.PermanentOffWorld",
-	"#MetropoliceSubtitle_Punish.ImmediateAmputation",
-	"#MetropoliceSubtitle_Punish.HalfReproductionCredits",
-	"#MetropoliceSubtitle_Punish.HalfRankPoints",
-}
-
-hook.Add( "SubtitleBase_EmitSubtitle","Metropolice_Subtitles", function(subtitle,ent)
-	
-	local Map = MapNameCallOuts["default"]
-	local Suspect = SuspectNames["default"]
-	if string.find( MapName, "trainstation" ) then
-		Map = MapNameCallOuts["trainstation"]
-		Suspect = SuspectNames["trainstation"]
-	elseif string.find( MapName, "canals" ) then
-		Map = MapNameCallOuts["canals"]
-		Suspect = SuspectNames["canals"]
-	elseif string.find( MapName, "eli" ) then
-		Map = MapNameCallOuts["eli"]
-		Suspect = SuspectNames["eli"]
-	elseif string.find( MapName, "town" ) then
-		Map = MapNameCallOuts["town"]
-		Suspect = SuspectNames["town"]
-	elseif string.find( MapName, "coast" ) then
-		Map = MapNameCallOuts["coast"]
-		Suspect = SuspectNames["coast"]
-	elseif string.find( MapName, "prison" ) then
-		Map = MapNameCallOuts["prison"]
-		Suspect = SuspectNames["prison"]
-	elseif string.find( MapName, "c17" ) then
-		Map = MapNameCallOuts["c17"]
-		Suspect = SuspectNames["c17"]
-	elseif string.find( MapName, "citadel" ) then
-		Map = MapNameCallOuts["citadel"]
-		Suspect = SuspectNames["citadel"]
-	end
-	
-	subtitle = string.gsub( subtitle, "{P_LOCATION_MAP}", language.GetPhrase(Map[math.random( #Map )]) )
-	subtitle = string.gsub( subtitle, "{P_RND_NUM}", math.random(1,9) )
-	subtitle = string.gsub( subtitle, "{P_MY_NAME}", language.GetPhrase(PoliceNames[math.random( #PoliceNames )]) )
-	subtitle = string.gsub( subtitle, "{P_MY_NUMBER}", math.random(1,9) )
-	subtitle = string.gsub( subtitle, "{P_RANDOM_CRIME}", language.GetPhrase(Crimes[math.random( #Crimes )]) )
-	subtitle = string.gsub( subtitle, "{P_SUSPECT_NAME}", language.GetPhrase(Suspect[math.random( #Suspect )]) )
-	subtitle = string.gsub( subtitle, "{P_PUNISH}", language.GetPhrase(Punishment[math.random( #Punishment )]) )
-	--subtitle = string.gsub( subtitle, "{P_TARGET_DISTANCE}", distance )
-	--print(ent)
-	--print(subtitle)
-	return subtitle
-end)
-
 local PoliceColor = Color(195,201,201)
 local OverwatchColor = Color(255,51,0)
 local Overwatch = {
@@ -1486,8 +1312,8 @@ Subtitle_Base_Table["METROPOLICE_LOST_LONG5"] = {
 	Speaker = Overwatch,
 	SpeakerColor = OverwatchColor,
 	Subtitle = {
-		["default"] = "All units switch com to Tac-5 and report into Command Point.",
-		--["schinese"] = "schinese",
+		["default"] = "All units switch com to Tac-5 and report in to Command Point.",
+		["schinese"] = "所有单位转为战术 5 并向指挥中心报告。",
 	},
 	SubtitleColor = OverwatchColor,
 	Duration = 4,
@@ -1713,21 +1539,21 @@ Subtitle_Base_Table["METROPOLICE_MONST_PARASITES1"] = {
 -- Killed Enemy
 Subtitle_Base_Table["METROPOLICE_KILL_MONST0"] = {
 	Subtitle = {
-		["default"] = "10-91D count is {P_KILLS}.",
+		["default"] = "10-91D count is {KILLS}.",
 	},
 	SubtitleColor = PoliceColor,
 }
 
 Subtitle_Base_Table["METROPOLICE_MONST_PARASITES1"] = {
 	Subtitle = {
-		["default"] = "Tag 10-91D {P_KILLS}.",
+		["default"] = "Tag 10-91D {KILLS}.",
 	},
 	SubtitleColor = PoliceColor,
 }
 
 Subtitle_Base_Table["METROPOLICE_MONST_PARASITES2"] = {
 	Subtitle = {
-		["default"] = "Sterilize {P_KILLS}.",
+		["default"] = "Sterilize {KILLS}.",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1813,21 +1639,21 @@ Subtitle_Base_Table["METROPOLICE_KILL_PLAYER9"] = {
 
 Subtitle_Base_Table["METROPOLICE_KILL_CITIZENS0"] = {
 	Subtitle = {
-		["default"] = "{P_KILLS} sentence delivered.",
+		["default"] = "{KILLS} sentence delivered.",
 	},
 	SubtitleColor = PoliceColor,
 }
 
 Subtitle_Base_Table["METROPOLICE_KILL_CITIZENS1"] = {
 	Subtitle = {
-		["default"] = "{P_KILLS} expired.",
+		["default"] = "{KILLS} expired.",
 	},
 	SubtitleColor = PoliceColor,
 }
 
 Subtitle_Base_Table["METROPOLICE_KILL_CITIZENS2"] = {
 	Subtitle = {
-		["default"] = "{P_KILLS} malignant.",
+		["default"] = "{KILLS} malignant.",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1843,14 +1669,14 @@ Subtitle_Base_Table["METROPOLICE_KILL_CHARACTER0"] = Subtitle_Base_Table["METROP
 
 Subtitle_Base_Table["METROPOLICE_KILL_CHARACTER1"] = {
 	Subtitle = {
-		["default"] = "DB count is {P_KILLS}.",
+		["default"] = "DB count is {KILLS}.",
 	},
 	SubtitleColor = PoliceColor,
 }
 
 Subtitle_Base_Table["METROPOLICE_KILL_CHARACTER2"] = {
 	Subtitle = {
-		["default"] = "Suspend {P_KILLS}.",
+		["default"] = "Suspend {KILLS}.",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1914,6 +1740,7 @@ Subtitle_Base_Table["METROPOLICE_MAN_DOWN0"] = {
 Subtitle_Base_Table["METROPOLICE_MAN_DOWN1"] = {
 	Subtitle = {
 		["default"] = "{P_MY_NAME} is down!",
+		["schinese"] = "{P_MY_NAME}倒下！",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1935,6 +1762,7 @@ Subtitle_Base_Table["METROPOLICE_LAST_OF_SQUAD0"] = {
 Subtitle_Base_Table["METROPOLICE_LAST_OF_SQUAD1"] = {
 	Subtitle = {
 		["default"] = "Officer down I am 10-99, repeat, I'm 10-99!",
+		["schinese"] = "警官战死，10-99！10-99！",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1942,6 +1770,7 @@ Subtitle_Base_Table["METROPOLICE_LAST_OF_SQUAD1"] = {
 Subtitle_Base_Table["METROPOLICE_LAST_OF_SQUAD2"] = {
 	Subtitle = {
 		["default"] = "CP is overrun, we have no containment!",
+		["schinese"] = "护卫队小队溃败，围堵失败！",
 	},
 	SubtitleColor = PoliceColor,
 }
