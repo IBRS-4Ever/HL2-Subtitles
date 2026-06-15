@@ -70,6 +70,7 @@ Subtitle_Base_Table["COMBINE_ASSAULT2"] = {
 Subtitle_Base_Table["COMBINE_ASSAULT3"] = {
 	Subtitle = {
 		["default"] = "Target my radial {S_DIR} degrees.",
+		["schinese"] = "目标在我的方位 {S_DIR} 度处。",
 	},
 	SubtitleColor = Color,
 }
@@ -149,6 +150,7 @@ Subtitle_Base_Table["COMBINE_GO_ALERT0"] = {
 Subtitle_Base_Table["COMBINE_LOST_LONG0"] = {
 	Subtitle = {
 		["default"] = "Target blackout, Sweep and resume.",
+		["schinese"] = "目标丢失，重新搜查。",
 	},
 	SubtitleColor = Color,
 }
@@ -163,7 +165,8 @@ Subtitle_Base_Table["COMBINE_LOST_LONG1"] = {
 
 Subtitle_Base_Table["COMBINE_LOST_LONG2"] = {
 	Subtitle = {
-		["default"] = "Motion check all radials.", 
+		["default"] = "Motion check all radials.",
+		["schinese"] = "检查周边动向。",
 	},
 	SubtitleColor = Color,
 }
@@ -172,49 +175,56 @@ Subtitle_Base_Table["COMBINE_LOST_LONG3"] = Subtitle_Base_Table["COMBINE_CHECK0"
 
 Subtitle_Base_Table["COMBINE_LOST_LONG4"] = {
 	Subtitle = {
-		["default"] = "Overwatch, team is deployed and scanning .", 
+		["default"] = "Overwatch, team is deployed and scanning .",
+		["schinese"] = "装甲核心，小队已部署，正在搜查。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LOST_LONG5"] = {
 	Subtitle = {
-		["default"] = "Overwatch, {S_MY_NAME}-{S_MY_NUMBER} engaged in cleanup .", 
+		["default"] = "Overwatch, {S_MY_NAME}-{S_MY_NUMBER} engaged in cleanup .",
+		["schinese"] = "装甲核心，{S_MY_NAME}-{S_MY_NUMBER} 正在进行清理。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LOST_LONG6"] = {
 	Subtitle = {
-		["default"] = "Ready weapons, stay alert.", 
+		["default"] = "Ready weapons, stay alert.",
+		["schinese"] = "武器就绪，保持警戒。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LOST_SHORT0"] = {
 	Subtitle = {
-		["default"] = "Target is at Shadow Four.", 
+		["default"] = "Target is at Shadow Four.",
+		["schinese"] = "目标已失去踪迹。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LOST_SHORT1"] = {
 	Subtitle = {
-		["default"] = "Ready extractors.", 
+		["default"] = "Ready extractors.",
+		["schinese"] = "反射弹就绪。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LOST_SHORT2"] = {
 	Subtitle = {
-		["default"] = "Ready charges.", 
+		["default"] = "Ready charges.",
+		["schinese"] = "炸药就绪。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LOST_SHORT3"] = {
 	Subtitle = {
-		["default"] = "Fix sightlines, move in.", 
+		["default"] = "Fix sightlines, move in.",
+		["schinese"] = "修正视线，进入。",
 	},
 	SubtitleColor = Color,
 }
@@ -222,13 +232,15 @@ Subtitle_Base_Table["COMBINE_LOST_SHORT3"] = {
 Subtitle_Base_Table["COMBINE_LOST_SHORT4"] = {
 	Subtitle = {
 		["default"] = "Containment proceeding.",
+		["schinese"] = "正在围堵。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_GO_ALERT1"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} executing full response.", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} executing full response.",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 执行完全响应。",
 	},
 	SubtitleColor = Color,
 }
@@ -251,7 +263,8 @@ Subtitle_Base_Table["COMBINE_MAN_DOWN1"] = {
 
 Subtitle_Base_Table["COMBINE_MAN_DOWN2"] = {
 	Subtitle = {
-		["default"] = "Overwatch, advised, we have heavy resistance.", 
+		["default"] = "Overwatch, advised, we have heavy resistance.",
+		["schinese"] = "装甲核心，我们遭到顽强抵抗。",
 	},
 	SubtitleColor = Color,
 }
@@ -274,56 +287,64 @@ Subtitle_Base_Table["COMBINE_MAN_DOWN4"] = {
 
 Subtitle_Base_Table["COMBINE_REFIND_ENEMY0"] = {
 	Subtitle = {
-		["default"] = "Target {S_TARGET_NAME}, go active intercept.", 
+		["default"] = "Target {S_TARGET_NAME}, go active intercept.",
+		["schinese"] = "目标{S_TARGET_NAME}，前去阻截。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_REFIND_ENEMY1"] = {
 	Subtitle = {
-		["default"] = "Go sharp, range {S_DIST}.", 
+		["default"] = "Go sharp, range {S_DIST}.",
+		["schinese"] = "向前推进，范围 {S_DIST}。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_REFIND_ENEMY2"] = {
 	Subtitle = {
-		["default"] = "Target contact at {S_MY_POSX}-{S_MY_POSY}.", 
+		["default"] = "Target contact at {S_MY_POSX}-{S_MY_POSY}.",
+		["schinese"] = "于 {S_MY_POSX}-{S_MY_POSY} 处遭遇目标。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_REFIND_ENEMY3"] = {
 	Subtitle = {
-		["default"] = "Visual confim, visual confim. Range {S_DIST}, bearing {S_DIR}.", 
+		["default"] = "Visual confim, visual confim. Range {S_DIST}, bearing {S_DIR}.",
+		["schinese"] = "目击确认，发现目标，范围 {S_DIST}，方位 {S_DIR}。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_THROW_GRENADE0"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} extractor away.", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} extractor away.",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 反射弹投出。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_THROW_GRENADE1"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} extractor is live.", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} extractor is live.",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 反射弹激活。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_THROW_GRENADE2"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} flush sharp zone.", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} flush sharp zone.",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 清除警戒区。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_THROW_GRENADE3"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER}, extractor away, sharp zone.", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER}, extractor away, sharp zone.",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 反射弹投出，清除警戒区。",
 	},
 	SubtitleColor = Color,
 }
@@ -373,111 +394,109 @@ Subtitle_Base_Table["COMBINE_DANGER2"] = {
 Subtitle_Base_Table["COMBINE_ALERT0"] = {
 	Subtitle = {
 		["default"] = "Contact confim {S_TARGET_NAME}, range {S_DIST} meters, bearing {S_DIR} degrees.", 
+		["schinese"] = "确认遭遇{S_TARGET_NAME}，范围 {S_DIST} 米，方位 {S_DIR} 度。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_ALERT1"] = {
 	Subtitle = {
-		["default"] = "Go sharp go sharp, {S_DIST} meters.", 
+		["default"] = "Go sharp go sharp, {S_DIST} meters.",
+		["schinese"] = "推进，推进，{S_DIST} 米。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_ALERT2"] = {
 	Subtitle = {
-		["default"] = "Call contact suspect Target One, grid {S_MY_POSX}-{S_MY_POSY}.", 
+		["default"] = "Call contact suspect Target One, grid {S_MY_POSX}-{S_MY_POSY}.",
+		["schinese"] = "呼叫，遭遇嫌犯目标一，坐标 {S_MY_POSX}-{S_MY_POSY}。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_ALERT3"] = {
 	Subtitle = {
-		["default"] = "Target is at {S_DIST} meters, bearing {S_DIR} degrees.", 
+		["default"] = "Target is at {S_DIST} meters, bearing {S_DIR} degrees.",
+		["schinese"] = "目标位于 {S_DIST} 米，方位 {S_DIR} 度处。",
 	},
 	SubtitleColor = Color,
 }
 
-Subtitle_Base_Table["COMBINE_ALERT4"] = {
-	Subtitle = {
-		["default"] = "Target my radial, {S_DIR} degrees.", 
-	},
-	SubtitleColor = Color,
-}
+Subtitle_Base_Table["COMBINE_ALERT4"] = Subtitle_Base_Table["COMBINE_ASSAULT3"]
 
-Subtitle_Base_Table["COMBINE_ALERT5"] = {
-	Subtitle = {
-		["default"] = "Contact {S_TARGET_NAME}.", 
-	},
-	SubtitleColor = Color,
-}
+Subtitle_Base_Table["COMBINE_ALERT5"] = Subtitle_Base_Table["COMBINE_ASSAULT0"]
 
 Subtitle_Base_Table["COMBINE_ALERT6"] = {
 	Subtitle = {
-		["default"] = "Target contact at {S_DIST} meters, bearing {S_DIR} degrees.", 
+		["default"] = "Target contact at {S_DIST} meters, bearing {S_DIR} degrees.",
+		["schinese"] = "于 {S_DIST} 米，方位 {S_DIR} 度处遭遇敌人。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_ALERT7"] = {
 	Subtitle = {
-		["default"] = "Designate target as {S_TARGET_NAME}.", 
+		["default"] = "Designate target as {S_TARGET_NAME}.",
+		["schinese"] = "指定目标为{S_TARGET_NAME}。",
 	},
 	SubtitleColor = Color,
 }
 
-Subtitle_Base_Table["COMBINE_ALERT8"] = {
-	Subtitle = {
-		["default"] = "Contact confirm prosecuting.", 
-	},
-	SubtitleColor = Color,
-}
+Subtitle_Base_Table["COMBINE_ALERT8"] = Subtitle_Base_Table["COMBINE_ASSAULT1"]
 
 Subtitle_Base_Table["COMBINE_ALERT9"] = {
 	Subtitle = {
-		["default"] = "Contact confim, designate target as {S_TARGET_NAME}.", 
+		["default"] = "Contact confim, designate target as {S_TARGET_NAME}.",
+		["schinese"] = "确认遇敌，指定目标为{S_TARGET_NAME}。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_PLAYERHIT0"] = {
 	Subtitle = {
-		["default"] = "Target compromised, move in, move in.", 
+		["default"] = "Target compromised, move in, move in.",
+		["schinese"] = "命中目标，前进。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_PLAYERHIT1"] = {
 	Subtitle = {
-		["default"] = "Affirmative we got him now.", 
+		["default"] = "Affirmative we got him now.",
+		["schinese"] = "确认，我们拿下他了。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_PLAYERHIT2"] = {
 	Subtitle = {
-		["default"] = "That's it, wrap it up.", 
+		["default"] = "That's it, wrap it up.",
+		["schinese"] = "好了，准备收队。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST0"] = {
 	Subtitle = {
-		["default"] = "Confirm sector not sterile.", 
+		["default"] = "Confirm sector not sterile.",
+		["schinese"] = "确认区域未被消毒。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST1"] = {
 	Subtitle = {
-		["default"] = "Visual on exogens.", 
+		["default"] = "Visual on exogens.",
+		["schinese"] = "发现外生异形。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST2"] = {
 	Subtitle = {
-		["default"] = "Overwatch, Sector {S_SECTORS} infected.", 
+		["default"] = "Overwatch, Sector {S_SECTORS} infected.",
+		["schinese"] = "装甲核心，区域 {S_SECTORS} 已被感染。",
 	},
 	SubtitleColor = Color,
 }
@@ -486,21 +505,24 @@ Subtitle_Base_Table["COMBINE_MONST_BUGS0"] = Subtitle_Base_Table["COMBINE_MONST0
 
 Subtitle_Base_Table["COMBINE_MONST_BUGS1"] = {
 	Subtitle = {
-		["default"] = "Swarm outbreak in Sector {S_SECTORS}.", 
+		["default"] = "Swarm outbreak in Sector {S_SECTORS}.",
+		["schinese"] = "在区域 {S_SECTORS} 爆发蚁狮狂潮。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST_BUGS2"] = {
 	Subtitle = {
-		["default"] = "Overwatch, we are in an infestation zone, Sector {S_SECTORS}.", 
+		["default"] = "Overwatch, we are in an infestation zone, Sector {S_SECTORS}.",
+		["schinese"] = "装甲核心，我们位于感染区，区域 {S_SECTORS}。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST_BUGS3"] = {
 	Subtitle = {
-		["default"] = "Overwatch, we have non-tagged viromes, grid {S_MY_POSX}-{S_MY_POSY}.", 
+		["default"] = "Overwatch, we have non-tagged viromes, grid {S_MY_POSX}-{S_MY_POSY}.",
+		["schinese"] = "装甲核心，我们发现了未标记的病原体，坐标 {S_MY_POSX}-{S_MY_POSY}。",
 	},
 	SubtitleColor = Color,
 }
@@ -508,34 +530,39 @@ Subtitle_Base_Table["COMBINE_MONST_BUGS3"] = {
 Subtitle_Base_Table["COMBINE_MONST_CITIZENS0"] = {
 	Subtitle = {
 		["default"] = "Outbreak.",
+		["schinese"] = "爆发。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST_CHARACTER0"] = {
 	Subtitle = {
-		["default"] = "Target: Priority Two escapee.", 
+		["default"] = "Target: Priority Two escapee.",
+		["schinese"] = "目标：二级越狱犯。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST_CHARACTER1"] = {
 	Subtitle = {
-		["default"] = "Outbreak status is code Hurricane.", 
+		["default"] = "Outbreak status is code Hurricane.",
+		["schinese"] = "爆发状态代码为“飓风”。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST_ZOMBIES0"] = {
 	Subtitle = {
-		["default"] = "Necrotics.", 
+		["default"] = "Necrotics.",
+		["schinese"] = "带菌者。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST_ZOMBIES1"] = {
 	Subtitle = {
-		["default"] = "Necrotics inbound.", 
+		["default"] = "Necrotics inbound.",
+		["schinese"] = "带菌者逼近。",
 	},
 	SubtitleColor = Color,
 }
@@ -544,35 +571,40 @@ Subtitle_Base_Table["COMBINE_MONST_ZOMBIES2"] = Subtitle_Base_Table["COMBINE_MON
 
 Subtitle_Base_Table["COMBINE_MONST_PARASITES0"] = {
 	Subtitle = {
-		["default"] = "Call contact parasitics.", 
+		["default"] = "Call contact parasitics.",
+		["schinese"] = "呼叫，遭遇寄生虫。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_MONST_PARASITES1"] = {
 	Subtitle = {
-		["default"] = "Overwatch, we have free parasites, Sector {S_SECTORS}.", 
+		["default"] = "Overwatch, we have free parasites, Sector {S_SECTORS}.",
+		["schinese"] = "装甲核心，我们发现游走寄生虫，区域 {S_SECTORS}。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_KILL_MONST0"] = {
 	Subtitle = {
-		["default"] = "{KILLS} cleaned.", 
+		["default"] = "{KILLS} cleaned.",
+		["schinese"] = "{KILLS} 已清理。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_KILL_MONST1"] = {
 	Subtitle = {
-		["default"] = "{KILLS} sterilized.", 
+		["default"] = "{KILLS} sterilized.",
+		["schinese"] = "{KILLS} 已消毒。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_KILL_MONST2"] = {
 	Subtitle = {
-		["default"] = "{KILLS} contained.", 
+		["default"] = "{KILLS} contained.",
+		["schinese"] = "{KILLS} 已平定。",
 	},
 	SubtitleColor = Color,
 }
@@ -583,91 +615,104 @@ Subtitle_Base_Table["COMBINE_COVER1"] = Subtitle_Base_Table["COMBINE_DANGER0"]
 
 Subtitle_Base_Table["COMBINE_COVER2"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} request medical!", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} request medical!",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 请求医疗照护！",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_COVER3"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} request stimdose!", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} request stimdose!",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 请求刺激剂！",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_TAUNT0"] = {
 	Subtitle = {
-		["default"] = "Target ineffective.", 
+		["default"] = "Target ineffective.",
+		["schinese"] = "目标未经训练。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_TAUNT1"] = {
 	Subtitle = {
-		["default"] = "Bodypack holding.", 
+		["default"] = "Bodypack holding.",
+		["schinese"] = "状态良好。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_TAUNT2"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER}, full active.", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER}, full active.",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER}，状态良好。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD0"] = {
 	Subtitle = {
-		["default"] = "Overwatch, request reserve activation.", 
+		["default"] = "Overwatch, request reserve activation.",
+		["schinese"] = "装甲核心，请求派遣预备队。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD1"] = {
 	Subtitle = {
-		["default"] = "Overwatch, sector is not secure.", 
+		["default"] = "Overwatch, sector is not secure.",
+		["schinese"] = "装甲核心，区域不安全。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD2"] = {
 	Subtitle = {
-		["default"] = "Sector {S_SECTORS}: Outbreak! Outbreak! Outbreak!", 
+		["default"] = "Sector {S_SECTORS}: Outbreak! Outbreak! Outbreak!",
+		["schinese"] = "区域 {S_SECTORS}：爆发！爆发！爆发！",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD3"] = {
 	Subtitle = {
-		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} is final team unit, request backup.", 
+		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} is final team unit, request backup.",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 为小队最后成员，请求支援。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD4"] = {
 	Subtitle = {
-		["default"] = "Overwatch, team is down, sector is not controlled.", 
+		["default"] = "Overwatch, team is down, sector is not controlled.",
+		["schinese"] = "装甲核心，全军覆没，此地已失控。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD5"] = {
 	Subtitle = {
-		["default"] = "Overwatch, sector overrun, repeat, sector overrun.", 
+		["default"] = "Overwatch, sector overrun, repeat, sector overrun.",
+		["schinese"] = "装甲核心，阵地失守，重复，失守！",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD6"] = {
 	Subtitle = {
-		["default"] = "Overwatch, request Skyshield.", 
+		["default"] = "Overwatch, request Skyshield.",
+		["schinese"] = "装甲核心，请求天屏。",
 	},
 	SubtitleColor = Color,
 }
 
 Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD7"] = {
 	Subtitle = {
-		["default"] = "Overwatch, request Winder dispatch.", 
+		["default"] = "Overwatch, request Winder dispatch.",
+		["schinese"] = "装甲核心，请求派遣空中支援。",
 	},
 	SubtitleColor = Color,
 }
@@ -675,6 +720,7 @@ Subtitle_Base_Table["COMBINE_LAST_OF_SQUAD7"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD0"] = {
 	Subtitle = {
 		["default"] = "Overwatch confirm, Helix Vector Tango is contained.",
+		["schinese"] = "装甲核心确认 HVT 已被平定。",
 	},
 	SubtitleColor = Color,
 }
@@ -682,6 +728,7 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD0"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD1"] = {
 	Subtitle = {
 		["default"] = "Overwatch, Target One sterilized.",
+		["schinese"] = "装甲核心，目标一已消毒。",
 	},
 	SubtitleColor = Color,
 }
@@ -689,6 +736,7 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD1"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD2"] = {
 	Subtitle = {
 		["default"] = "Overwatch, target contained.",
+		["schinese"] = "装甲核心，已平定目标。",
 	},
 	SubtitleColor = Color,
 }
@@ -696,6 +744,7 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD2"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD3"] = {
 	Subtitle = {
 		["default"] = "Overwatch, stabilization team has sector control.",
+		["schinese"] = "装甲核心，维和部队已控制该区域。",
 	},
 	SubtitleColor = Color,
 }
@@ -703,6 +752,7 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD3"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD4"] = {
 	Subtitle = {
 		["default"] = "Overwatch, {S_TARGET_NAME} secure.",
+		["schinese"] = "装甲核心，{S_TARGET_NAME}已消灭。",
 	},
 	SubtitleColor = Color,
 }
@@ -710,6 +760,7 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD4"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD5"] = {
 	Subtitle = {
 		["default"] = "Overwatch, {S_TARGET_NAME} delivered.",
+		["schinese"] = "装甲核心，{S_TARGET_NAME}已处决。",
 	},
 	SubtitleColor = Color,
 }
@@ -717,6 +768,7 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD5"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD6"] = {
 	Subtitle = {
 		["default"] = "Overwatch, antiseptic administer.",
+		["schinese"] = "装甲核心，已注射消毒剂。",
 	},
 	SubtitleColor = Color,
 }
@@ -724,7 +776,6 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD6"] = {
 Subtitle_Base_Table["COMBINE_IDLE0"] = {
 	Subtitle = {
 		["default"] = "{S_RND_NAME}-{S_RND_CODE}-{S_RND_NUM}-{S_RND_NUM}.",
-		["schinese"] = "{S_RND_NAME}-{S_RND_CODE}-{S_RND_NUM}-{S_RND_NUM}。",
 	},
 	SubtitleColor = Color,
 }
@@ -852,7 +903,7 @@ Subtitle_Base_Table["COMBINE_ANSWER4"] = {
 Subtitle_Base_Table["COMBINE_CLEAR0"] = {
 	Subtitle = {
 		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} has negative movement, grid {S_MY_POSX}-{S_MY_POSY}.",
-		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER}，一切正常，坐标 {S_MY_POSX}-{S_MY_POSY}。",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 报告一切正常，坐标 {S_MY_POSX}-{S_MY_POSY}。",
 	},
 	SubtitleColor = Color,
 }
@@ -860,7 +911,7 @@ Subtitle_Base_Table["COMBINE_CLEAR0"] = {
 Subtitle_Base_Table["COMBINE_CLEAR1"] = {
 	Subtitle = {
 		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} is holding at code {S_RND_CODE}.",
-		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 正在坚守代码{S_RND_CODE}。",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 正在坚守代码“{S_RND_CODE}”。",
 	},
 	SubtitleColor = Color,
 }
@@ -868,7 +919,7 @@ Subtitle_Base_Table["COMBINE_CLEAR1"] = {
 Subtitle_Base_Table["COMBINE_CLEAR2"] = {
 	Subtitle = {
 		["default"] = "{S_MY_NAME}-{S_MY_NUMBER} has negative movement.",
-		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER}，一切正常。",
+		["schinese"] = "{S_MY_NAME}-{S_MY_NUMBER} 报告一切正常。",
 	},
 	SubtitleColor = Color,
 }
@@ -932,7 +983,7 @@ Subtitle_Base_Table["COMBINE_CHECK2"] = {
 Subtitle_Base_Table["prison.sradio_coast_bunker1"] = {
 	Subtitle = {
 		["default"] = "Hardpoint Nomad reactivate perimeter restrictor and report. Hardpoint Nomad reactivate your perimeter restrictors and report. Nomad get those restrictors back online, your sector shows active biotics.",
-		["schinese"] = "路障位置，游魂，恢复边防限制器并报告。路障位置，游魂，恢复边防限制器并报告。游魂，保存限制器处于联机状态，你的区域发现生物活动。",
+		["schinese"] = "路障位置，游魂，恢复边防限制器并报告。路障位置，游魂，恢复边防限制器并报告。游魂，保持限制器处于联机状态，你的区域发现生物活动。",
 	},
 	SubtitleColor = Color,
 }

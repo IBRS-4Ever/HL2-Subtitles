@@ -113,7 +113,7 @@ Subtitle_Base_Table["METROPOLICE_PAIN_HEAVY3"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE0"] = {
 	Subtitle = {
 		["default"] = "Unit is 10-8 standing by.", 
-		["schinese"] = "单位 10-8，就绪。",
+		["schinese"] = "单位执勤中，就绪。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -121,7 +121,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE0"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE1"] = {
 	Subtitle = {
 		["default"] = "Unit is on duty, 10-8.", 
-		["schinese"] = "单位负责，10-8。",
+		["schinese"] = "单位正在履行职责，执勤中。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -129,7 +129,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE1"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE2"] = {
 	Subtitle = {
 		["default"] = "Holding on 10-14 duty at Code 4.",
-		["schinese"] = "继续 10-14 职责，执行代码 4。",
+		["schinese"] = "继续护送任务，执行代码 4。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -137,7 +137,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE2"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE3"] = {
 	Subtitle = {
 		["default"] = "Unit is 10-65.", 
-		["schinese"] = "单位 10-65。",
+		["schinese"] = "单位正在分配网络消息。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -145,7 +145,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE3"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE4"] = {
 	Subtitle = {
 		["default"] = "Code 7.",
-		["schinese"] = "代码 7。",
+		["schinese"] = "单位离岗进食。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -174,7 +174,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE7"] = {
 	Speaker = Overwatch,
 	SpeakerColor = OverwatchColor,
 	Subtitle = {
-		["default"] = "[CODE]", 
+		["default"] = "{P_ACT} {P_RND_NUM} {P_ACT}", 
 	},
 	SubtitleColor = OverwatchColor,
 }
@@ -217,7 +217,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CHECK3"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CLEAR0"] = {
 	Subtitle = {
 		["default"] = "Clear, no 647, no 10-107.",
-		["schinese"] = "解除警报，无 647，无 10-107。",
+		["schinese"] = "解除警报，无流浪人员，无可疑人员。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -247,13 +247,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CLEAR3"] = {
 	Duration = 3,
 }
 
-Subtitle_Base_Table["METROPOLICE_IDLE_QUEST0"] = {
-	Subtitle = {
-		["default"] = "Anyone else pick up a 647-E reading?",
-		["schinese"] = "其他人是否收到 647-E 信号？",
-	},
-	SubtitleColor = PoliceColor,
-}
+Subtitle_Base_Table["METROPOLICE_IDLE_QUEST0"] = Subtitle_Base_Table["METROPOLICE_IDLE_CHECK1"]
 
 Subtitle_Base_Table["METROPOLICE_IDLE_QUEST1"] = {
 	Subtitle = {
@@ -283,7 +277,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_QUEST4"] = {
 	SpeakerColor = OverwatchColor,
 	Subtitle = {
 		["default"] = "Team confirm UPI alert.",
-		["schinese"] = "小组确认 UPI 警报。",
+		["schinese"] = "小组确认是否发现不明身份关系人。",
 	},
 	SubtitleColor = OverwatchColor,
 }
@@ -339,7 +333,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_ANSWER1"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_ANSWER2"] = {
 	Subtitle = {
 		["default"] = "10-4.",
-		["schinese"] = "10-4。",
+		["schinese"] = "了解。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -347,7 +341,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_ANSWER2"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_ANSWER3"] = {
 	Subtitle = {
 		["default"] = "10-2.",
-		["schinese"] = "10-2。",
+		["schinese"] = "清楚。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -355,7 +349,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_ANSWER3"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_ANSWER4"] = {
 	Subtitle = {
 		["default"] = "10-97.",
-		["schinese"] = "10-97。",
+		["schinese"] = "已到达现场。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -433,7 +427,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_HARASS_PLAYER8"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CR0"] = {
 	Subtitle = {
 		["default"] = "10-97 but suspect is GOA.",
-		["schinese"] = "10-97，嫌犯已逃逸。",
+		["schinese"] = "已到达现场，嫌犯已逃逸。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -441,7 +435,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CR0"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CR1"] = {
 	Subtitle = {
 		["default"] = "Suspect 11-6, my 10-20 is {P_LOCATION_MAP}-{P_RND_NUM}.",
-		["schinese"] = "嫌犯 11-6，10-20 为{P_LOCATION_MAP}-{P_RND_NUM}。",
+		["schinese"] = "嫌犯非法开枪，我的位置为{P_LOCATION_MAP}-{P_RND_NUM}。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -449,7 +443,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CR1"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CR2"] = {
 	Subtitle = {
 		["default"] = "10-8 standing by.",
-		["schinese"] = "10-8 准备就绪。",
+		["schinese"] = "执勤中，准备就绪。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -457,7 +451,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CR2"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CR3"] = {
 	Subtitle = {
 		["default"] = "Code 100.",
-		["schinese"] = "代码 100。",
+		["schinese"] = "已就位，准备拦截嫌疑人。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -469,7 +463,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CR5"] = {
 	SpeakerColor = OverwatchColor,
 	Subtitle = {
 		["default"] = "Suspect is now 187.",
-		["schinese"] = "嫌犯当前 187。",
+		["schinese"] = "嫌犯已杀人。",
 	},
 	SubtitleColor = OverwatchColor,
 	Duration = 3,
@@ -626,7 +620,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CHECK_CR0"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CHECK_CR1"] = {
 	Subtitle = {
 		["default"] = "CP requests all units at location report in.",
-		["schinese"] = "CP 要求所有单位报告各自位置。",
+		["schinese"] = "指挥中心要求所有单位报告各自位置。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -634,7 +628,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CHECK_CR1"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CHECK_CR2"] = {
 	Subtitle = {
 		["default"] = "CP we need Airwatch to BOL that 243.",
-		["schinese"] = "CP，请求空中支援，对 243 警戒。",
+		["schinese"] = "指挥中心，请求空中支援搜寻袭警嫌犯。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -642,7 +636,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CHECK_CR2"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CHECK_CR3"] = {
 	Subtitle = {
 		["default"] = "Locat CPT report status.",
-		["schinese"] = "本地 CPT 报告状态。",
+		["schinese"] = "本地护卫队小组报告状态。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -707,7 +701,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CLEAR_CR1"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CLEAR_CR2"] = {
 	Subtitle = {
 		["default"] = "No visual on UPI at this time.",
-		["schinese"] = "当前未发现 UPI。",
+		["schinese"] = "当前未发现不明身份关系人。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -756,7 +750,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_QUEST_CR2"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_QUEST_CR3"] = {
 	Subtitle = {
 		["default"] = "Disp updating APB likeness {P_SUSPECT_NAME}.",
-		["schinese"] = "调度员，正在更新 APB：{P_SUSPECT_NAME}。",
+		["schinese"] = "调度员，正在更新全面通缉令：{P_SUSPECT_NAME}。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -766,7 +760,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_QUEST_CR4"] = {
 	SpeakerColor = OverwatchColor,
 	Subtitle = {
 		["default"] = "All units: verdict code on suspect {P_SUSPECT_NAME} is now {P_ACT} {P_RND_NUM} {P_ACT}.",
-		["schinese"] = "所有单位，嫌犯代码{P_SUSPECT_NAME}现在{P_ACT} {P_RND_NUM} {P_ACT}。",
+		["schinese"] = "所有单位，嫌犯代码{P_SUSPECT_NAME}现在{P_ACT}-{P_RND_NUM}-{P_ACT}。",
 	},
 	SubtitleColor = OverwatchColor,
 	Duration = 3,
