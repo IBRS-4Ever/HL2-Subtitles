@@ -46,7 +46,7 @@ Subtitle_Base_Table["COMBINE_ANNOUNCE4"] = {
 Subtitle_Base_Table["COMBINE_ASSAULT0"] = {
 	Subtitle = {
 		["default"] = "Contact {S_TARGET_NAME}.",
-		["schinese"] = "遭遇{S_TARGET_NAME}。",
+		["schinese"] = "遭遇“{S_TARGET_NAME}”。",
 	},
 	SubtitleColor = Color,
 }
@@ -288,7 +288,7 @@ Subtitle_Base_Table["COMBINE_MAN_DOWN4"] = {
 Subtitle_Base_Table["COMBINE_REFIND_ENEMY0"] = {
 	Subtitle = {
 		["default"] = "Target {S_TARGET_NAME}, go active intercept.",
-		["schinese"] = "目标{S_TARGET_NAME}，前去阻截。",
+		["schinese"] = "发现目标“{S_TARGET_NAME}”，前去阻截。",
 	},
 	SubtitleColor = Color,
 }
@@ -394,7 +394,7 @@ Subtitle_Base_Table["COMBINE_DANGER2"] = {
 Subtitle_Base_Table["COMBINE_ALERT0"] = {
 	Subtitle = {
 		["default"] = "Contact confim {S_TARGET_NAME}, range {S_DIST} meters, bearing {S_DIR} degrees.", 
-		["schinese"] = "确认遭遇{S_TARGET_NAME}，范围 {S_DIST} 米，方位 {S_DIR} 度。",
+		["schinese"] = "确认遭遇“{S_TARGET_NAME}”，范围 {S_DIST} 米，方位 {S_DIR} 度。",
 	},
 	SubtitleColor = Color,
 }
@@ -438,7 +438,7 @@ Subtitle_Base_Table["COMBINE_ALERT6"] = {
 Subtitle_Base_Table["COMBINE_ALERT7"] = {
 	Subtitle = {
 		["default"] = "Designate target as {S_TARGET_NAME}.",
-		["schinese"] = "指定目标为{S_TARGET_NAME}。",
+		["schinese"] = "指定目标为“{S_TARGET_NAME}”。",
 	},
 	SubtitleColor = Color,
 }
@@ -448,7 +448,7 @@ Subtitle_Base_Table["COMBINE_ALERT8"] = Subtitle_Base_Table["COMBINE_ASSAULT1"]
 Subtitle_Base_Table["COMBINE_ALERT9"] = {
 	Subtitle = {
 		["default"] = "Contact confim, designate target as {S_TARGET_NAME}.",
-		["schinese"] = "确认遇敌，指定目标为{S_TARGET_NAME}。",
+		["schinese"] = "确认遇敌，指定目标为“{S_TARGET_NAME}”。",
 	},
 	SubtitleColor = Color,
 }
@@ -752,7 +752,7 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD3"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD4"] = {
 	Subtitle = {
 		["default"] = "Overwatch, {S_TARGET_NAME} secure.",
-		["schinese"] = "装甲核心，{S_TARGET_NAME}已消灭。",
+		["schinese"] = "装甲核心，“{S_TARGET_NAME}”已消灭。",
 	},
 	SubtitleColor = Color,
 }
@@ -760,7 +760,7 @@ Subtitle_Base_Table["COMBINE_PLAYER_DEAD4"] = {
 Subtitle_Base_Table["COMBINE_PLAYER_DEAD5"] = {
 	Subtitle = {
 		["default"] = "Overwatch, {S_TARGET_NAME} delivered.",
-		["schinese"] = "装甲核心，{S_TARGET_NAME}已处决。",
+		["schinese"] = "装甲核心，“{S_TARGET_NAME}”已处决。",
 	},
 	SubtitleColor = Color,
 }

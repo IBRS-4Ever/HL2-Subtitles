@@ -1240,7 +1240,7 @@ Subtitle_Base_Table["METROPOLICE_COVER_HEAVY_DAMAGE3"] = {
 -- LOST ENEMY
 Subtitle_Base_Table["METROPOLICE_LOST_SHORT0"] = {
 	Subtitle = {
-		["default"] = "{P_SUSPECT_NAME} hiding, last seen at range {P_TARGET_DISTANCE} meters.",
+		["default"] = "{P_SUSPECT_NAME} hiding, last seen at range {P_DIST} meters.",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1330,7 +1330,7 @@ Subtitle_Base_Table["METROPOLICE_REFIND_ENEMY1"] = {
 
 Subtitle_Base_Table["METROPOLICE_REFIND_ENEMY2"] = {
 	Subtitle = {
-		["default"] = "There he goes, he's at {P_TARGET_DISTANCE} meters.",
+		["default"] = "There he goes, he's at {P_DIST} meters.",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1387,7 +1387,7 @@ Subtitle_Base_Table["METROPOLICE_MONST_PLAYER4"] = {
 
 Subtitle_Base_Table["METROPOLICE_MONST_PLAYER5"] = {
 	Subtitle = {
-		["default"] = "There he is, {P_TARGET_DISTANCE} meters.",
+		["default"] = "There he is, {P_DIST} meters.",
 	},
 	SubtitleColor = PoliceColor,
 }

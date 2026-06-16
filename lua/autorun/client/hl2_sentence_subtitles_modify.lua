@@ -203,31 +203,31 @@ local RandomSoldierNames = {
 }
 
 local SoldierTargetNames = { 
-	"#CombineSoldierSubtitle_Name.Freeman3",
-	"#CombineSoldierSubtitle_Name.AntiCitizenOne",
-	"#CombineSoldierSubtitle_Name.TargetOne",
-	"#CombineSoldierSubtitle_Name.Priority1Objective",
-	"#CombineSoldierSubtitle_Name.Phantom",
-	"#CombineSoldierSubtitle_Name.Ghost2",
+	"#CombineSoldierSubtitle_Target.Freeman3",
+	"#CombineSoldierSubtitle_Target.AntiCitizenOne",
+	"#CombineSoldierSubtitle_Target.TargetOne",
+	"#CombineSoldierSubtitle_Target.Priority1Objective",
+	"#CombineSoldierSubtitle_Target.Phantom",
+	"#CombineSoldierSubtitle_Target.Ghost2",
 }
 
 local RandomSoldierCodes = { 
-	"#CombineSoldierSubtitle_Name.Apex",
-	"#CombineSoldierSubtitle_Name.Ion",
-	"#CombineSoldierSubtitle_Name.Jet",
-	"#CombineSoldierSubtitle_Name.Kilo",
-	"#CombineSoldierSubtitle_Name.Mace",
-	"#CombineSoldierSubtitle_Name.Nova",
-	"#CombineSoldierSubtitle_Name.Payback",
-	"#CombineSoldierSubtitle_Name.Sundown",
-	"#CombineSoldierSubtitle_Name.Uniform",
-	"#CombineSoldierSubtitle_Name.Boomer",
-	"#CombineSoldierSubtitle_Name.Echo",
-	"#CombineSoldierSubtitle_Name.Flatline",
-	"#CombineSoldierSubtitle_Name.Helix",
-	"#CombineSoldierSubtitle_Name.Ice",
-	"#CombineSoldierSubtitle_Name.Quicksand",
-	"#CombineSoldierSubtitle_Name.Ripcord",
+	"#CombineSoldierSubtitle_Code.Apex",
+	"#CombineSoldierSubtitle_Code.Ion",
+	"#CombineSoldierSubtitle_Code.Jet",
+	"#CombineSoldierSubtitle_Code.Kilo",
+	"#CombineSoldierSubtitle_Code.Mace",
+	"#CombineSoldierSubtitle_Code.Nova",
+	"#CombineSoldierSubtitle_Code.Payback",
+	"#CombineSoldierSubtitle_Code.Sundown",
+	"#CombineSoldierSubtitle_Code.Uniform",
+	"#CombineSoldierSubtitle_Code.Boomer",
+	"#CombineSoldierSubtitle_Code.Echo",
+	"#CombineSoldierSubtitle_Code.Flatline",
+	"#CombineSoldierSubtitle_Code.Helix",
+	"#CombineSoldierSubtitle_Code.Ice",
+	"#CombineSoldierSubtitle_Code.Quicksand",
+	"#CombineSoldierSubtitle_Code.Ripcord",
 }
 
 hook.Add( "SubtitleBase_EmitSubtitle","HL2SentenceSubtitlesModify", function(subtitle,ent)
@@ -268,6 +268,7 @@ hook.Add( "SubtitleBase_EmitSubtitle","HL2SentenceSubtitlesModify", function(sub
 	subtitle = string.gsub( subtitle, "{P_SUSPECT_NAME}", language.GetPhrase(Suspect[math.random( #Suspect )]) )
 	subtitle = string.gsub( subtitle, "{P_PUNISH}", language.GetPhrase(Punishment[math.random( #Punishment )]) )
 	subtitle = string.gsub( subtitle, "{P_ACT}", function() return language.GetPhrase( Act[math.random( #Act )]) end)
+	subtitle = string.gsub( subtitle, "{P_DIST}", math.random(1,300) )
 	subtitle = string.gsub( subtitle, "{S_MY_NAME}", language.GetPhrase(SoldierNames[math.random( #SoldierNames )]) )
 	subtitle = string.gsub( subtitle, "{S_RND_NAME}", language.GetPhrase(RandomSoldierNames[math.random( #RandomSoldierNames )]) )
 	subtitle = string.gsub( subtitle, "{S_WHO_DIED}", language.GetPhrase( (math.random(1) == 1 and SoldierNames[math.random( #SoldierNames )]) or RandomSoldierNames[math.random( #RandomSoldierNames )]) )
