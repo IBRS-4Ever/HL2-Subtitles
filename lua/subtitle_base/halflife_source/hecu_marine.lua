@@ -1,3 +1,4 @@
+if SERVER then return end
 Subtitle_Base_Table = Subtitle_Base_Table or {} -- don't touch
 
 local Color = Color(128,128,128)

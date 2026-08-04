@@ -231,7 +231,6 @@ local RandomSoldierCodes = {
 }
 
 hook.Add( "SubtitleBase_EmitSubtitle","HL2SentenceSubtitlesModify", function(subtitle,ent)
-	local OriginalSubtitle = subtitle
 	local Map = MapNameCallOuts["default"]
 	local Suspect = SuspectNames["default"]
 	if string.find( MapName, "trainstation" ) then
@@ -259,33 +258,33 @@ hook.Add( "SubtitleBase_EmitSubtitle","HL2SentenceSubtitlesModify", function(sub
 		Map = MapNameCallOuts["citadel"]
 		Suspect = SuspectNames["citadel"]
 	end
-	
-	subtitle = string.gsub( subtitle, "{P_LOCATION_MAP}", language.GetPhrase(Map[math.random( #Map )]) )
-	subtitle = string.gsub( subtitle, "{P_RND_NUM}",  function() return math.random(1,9) end )
-	subtitle = string.gsub( subtitle, "{P_MY_NAME}", language.GetPhrase(PoliceNames[math.random( #PoliceNames )]) )
-	subtitle = string.gsub( subtitle, "{P_MY_NUMBER}", math.random(1,9) )
-	subtitle = string.gsub( subtitle, "{P_RANDOM_CRIME}", language.GetPhrase(Crimes[math.random( #Crimes )]) )
-	subtitle = string.gsub( subtitle, "{P_SUSPECT_NAME}", language.GetPhrase(Suspect[math.random( #Suspect )]) )
-	subtitle = string.gsub( subtitle, "{P_PUNISH}", language.GetPhrase(Punishment[math.random( #Punishment )]) )
-	subtitle = string.gsub( subtitle, "{P_ACT}", function() return language.GetPhrase( Act[math.random( #Act )]) end)
-	subtitle = string.gsub( subtitle, "{P_DIST}", math.random(1,300) )
-	subtitle = string.gsub( subtitle, "{S_MY_NAME}", language.GetPhrase(SoldierNames[math.random( #SoldierNames )]) )
-	subtitle = string.gsub( subtitle, "{S_RND_NAME}", language.GetPhrase(RandomSoldierNames[math.random( #RandomSoldierNames )]) )
-	subtitle = string.gsub( subtitle, "{S_WHO_DIED}", language.GetPhrase( (math.random(1) == 1 and SoldierNames[math.random( #SoldierNames )]) or RandomSoldierNames[math.random( #RandomSoldierNames )]) )
-	subtitle = string.gsub( subtitle, "{S_TARGET_NAME}", language.GetPhrase(SoldierTargetNames[math.random( #SoldierTargetNames )]) )
-	subtitle = string.gsub( subtitle, "{S_MY_POSX}", math.random(1,20) )
-	subtitle = string.gsub( subtitle, "{S_MY_POSY}", math.random(1,20) )
-	subtitle = string.gsub( subtitle, "{S_SECTORS}", math.random(1,20) )
-	subtitle = string.gsub( subtitle, "{S_RND_NUM}", function() return math.random(1,9) end )
-	subtitle = string.gsub( subtitle, "{S_MY_NUMBER}", math.random(1,9) )
-	subtitle = string.gsub( subtitle, "{S_RND_CODE}", language.GetPhrase(RandomSoldierCodes[math.random( #RandomSoldierCodes )]) )
-	subtitle = string.gsub( subtitle, "{S_DIST}", math.random(1,300) )
-	subtitle = string.gsub( subtitle, "{S_DIR}", math.random(1,300) )
-	if string.find( subtitle,"{KILLS}" ) then
+
+	local ModifiedSubtitle = subtitle.Text
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_LOCATION_MAP}", language.GetPhrase(Map[math.random( #Map )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_RND_NUM}",  function() return math.random(1,9) end )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_MY_NAME}", language.GetPhrase(PoliceNames[math.random( #PoliceNames )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_MY_NUMBER}", math.random(1,9) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_RANDOM_CRIME}", language.GetPhrase(Crimes[math.random( #Crimes )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_SUSPECT_NAME}", language.GetPhrase(Suspect[math.random( #Suspect )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_PUNISH}", language.GetPhrase(Punishment[math.random( #Punishment )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_ACT}", function() return language.GetPhrase( Act[math.random( #Act )]) end)
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_DIST}", math.random(1,300) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_MY_NAME}", language.GetPhrase(SoldierNames[math.random( #SoldierNames )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_RND_NAME}", language.GetPhrase(RandomSoldierNames[math.random( #RandomSoldierNames )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_WHO_DIED}", language.GetPhrase( (math.random(1) == 1 and SoldierNames[math.random( #SoldierNames )]) or RandomSoldierNames[math.random( #RandomSoldierNames )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_TARGET_NAME}", language.GetPhrase(SoldierTargetNames[math.random( #SoldierTargetNames )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_MY_POSX}", math.random(1,20) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_MY_POSY}", math.random(1,20) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_SECTORS}", math.random(1,20) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_RND_NUM}", function() return math.random(1,9) end )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_MY_NUMBER}", math.random(1,9) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_RND_CODE}", language.GetPhrase(RandomSoldierCodes[math.random( #RandomSoldierCodes )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_DIST}", math.random(1,300) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_DIR}", math.random(1,300) )
+	if string.find( ModifiedSubtitle,"{KILLS}" ) then
 		ent.Kills = ent.Kills or 0
-		subtitle = string.gsub( subtitle, "{KILLS}", ent.Kills + 1 )
+		ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{KILLS}", ent.Kills + 1 )
 		ent.Kills = ent.Kills + 1
 	end
-	if subtitle == OriginalSubtitle then return end
-	return subtitle
+	subtitle.Text = ModifiedSubtitle
 end)
