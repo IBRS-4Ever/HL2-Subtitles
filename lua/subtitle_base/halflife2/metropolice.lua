@@ -185,7 +185,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE7"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_CHECK0"] = {
 	Subtitle = {
 		["default"] = "Protection Teams at {P_LOCATION_MAP}-{P_RND_NUM} report in.",
-		["schinese"] = "位于{P_LOCATION_MAP}-{P_RND_NUM} 区的护卫队报告各自位置。",
+		["schinese"] = "位于{P_LOCATION_MAP}-{P_RND_NUM} 的护卫队报告各自位置。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -517,7 +517,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_CR8"] = {
 	SpeakerColor = OverwatchColor,
 	Subtitle = {
 		["default"] = "Restricted incursion in progress, officer at {P_LOCATION_MAP}-{P_RND_NUM} investigate and report.",
-		["schinese"] = "管制区域遭到入侵，位于{P_LOCATION_MAP}-{P_RND_NUM} 区的警官，调查并报告。",
+		["schinese"] = "管制区域遭到入侵，位于{P_LOCATION_MAP}-{P_RND_NUM} 的警官，调查并报告。",
 	},
 	SubtitleColor = OverwatchColor,
 	Duration = 5,
@@ -767,7 +767,7 @@ Subtitle_Base_Table["METROPOLICE_IDLE_QUEST_CR2"] = {
 Subtitle_Base_Table["METROPOLICE_IDLE_QUEST_CR3"] = {
 	Subtitle = {
 		["default"] = "Disp updating APB likeness {P_SUSPECT_NAME}.",
-		["schinese"] = "调度员，正在更新全面通缉令：{P_SUSPECT_NAME}。",
+		["schinese"] = "调度员，正在更新“{P_SUSPECT_NAME}”的全面通缉令。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1466,6 +1466,7 @@ Subtitle_Base_Table["METROPOLICE_MONST_BUGS3"] = {
 Subtitle_Base_Table["METROPOLICE_MONST_CITIZENS0"] = {
 	Subtitle = {
 		["default"] = "Non-citizen outbreak.",
+		["schinese"] = "非市民爆发。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1480,6 +1481,7 @@ Subtitle_Base_Table["METROPOLICE_MONST_CITIZENS1"] = {
 Subtitle_Base_Table["METROPOLICE_MONST_CITIZENS2"] = {
 	Subtitle = {
 		["default"] = "Possible 404 here, {P_LOCATION_MAP}-{P_RND_NUM}.",
+		["schinese"] = "此处可能 404，{P_LOCATION_MAP}-{P_RND_NUM}。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1532,6 +1534,7 @@ Subtitle_Base_Table["METROPOLICE_MONST_PARASITES0"] = {
 Subtitle_Base_Table["METROPOLICE_MONST_PARASITES1"] = {
 	Subtitle = {
 		["default"] = "Loose parasitics.",
+		["schinese"] = "离散寄生虫。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1544,16 +1547,17 @@ Subtitle_Base_Table["METROPOLICE_KILL_MONST0"] = {
 	SubtitleColor = PoliceColor,
 }
 
-Subtitle_Base_Table["METROPOLICE_MONST_PARASITES1"] = {
+Subtitle_Base_Table["METROPOLICE_KILL_MONST1"] = {
 	Subtitle = {
 		["default"] = "Tag 10-91D {KILLS}.",
 	},
 	SubtitleColor = PoliceColor,
 }
 
-Subtitle_Base_Table["METROPOLICE_MONST_PARASITES2"] = {
+Subtitle_Base_Table["METROPOLICE_KILL_MONST2"] = {
 	Subtitle = {
 		["default"] = "Sterilize {KILLS}.",
+		["schinese"] = "已消毒 {KILLS} 个。",
 	},
 	SubtitleColor = PoliceColor,
 }
@@ -1567,6 +1571,7 @@ Subtitle_Base_Table["METROPOLICE_KILL_BUGS0"] = {
 
 Subtitle_Base_Table["METROPOLICE_KILL_BUGS1"] = Subtitle_Base_Table["METROPOLICE_MONST_PARASITES2"]
 
+--[[
 Subtitle_Base_Table["METROPOLICE_KILL_PLAYER0"] = {
 	Subtitle = {
 		["default"] = "Tag one bug.",
@@ -1636,6 +1641,7 @@ Subtitle_Base_Table["METROPOLICE_KILL_PLAYER9"] = {
 	},
 	SubtitleColor = PoliceColor,
 }
+]]
 
 Subtitle_Base_Table["METROPOLICE_KILL_CITIZENS0"] = {
 	Subtitle = {

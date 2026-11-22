@@ -1,5 +1,7 @@
 
 local MapName = game.GetMap()
+local MapNumber = math.random(0,9)
+
 local PoliceNames = { 
 	"#MetropoliceSubtitle_Name.Defender",
 	"#MetropoliceSubtitle_Name.Hero",
@@ -106,6 +108,36 @@ local SuspectNames = {
 		"#MetropoliceSubtitle_Suspect.Freeman",
 	},
 }
+
+local Map = MapNameCallOuts["default"]
+local Suspect = SuspectNames["default"]
+if string.find( MapName, "trainstation" ) then
+	Map = MapNameCallOuts["trainstation"]
+	Suspect = SuspectNames["trainstation"]
+elseif string.find( MapName, "canals" ) then
+	Map = MapNameCallOuts["canals"]
+	Suspect = SuspectNames["canals"]
+elseif string.find( MapName, "eli" ) then
+	Map = MapNameCallOuts["eli"]
+	Suspect = SuspectNames["eli"]
+elseif string.find( MapName, "town" ) then
+	Map = MapNameCallOuts["town"]
+	Suspect = SuspectNames["town"]
+elseif string.find( MapName, "coast" ) then
+	Map = MapNameCallOuts["coast"]
+	Suspect = SuspectNames["coast"]
+elseif string.find( MapName, "prison" ) then
+	Map = MapNameCallOuts["prison"]
+	Suspect = SuspectNames["prison"]
+elseif string.find( MapName, "c17" ) then
+	Map = MapNameCallOuts["c17"]
+	Suspect = SuspectNames["c17"]
+elseif string.find( MapName, "citadel" ) then
+	Map = MapNameCallOuts["citadel"]
+	Suspect = SuspectNames["citadel"]
+end
+local CurrentMapName = Map[ math.random(1,#Map) ]
+local CurrentSuspect = Suspect[ math.random(1,#Suspect) ]
 
 local Crimes = {
 	"#MetropoliceSubtitle_Crime.CriminalTrespass63",
@@ -230,42 +262,24 @@ local RandomSoldierCodes = {
 	"#CombineSoldierSubtitle_Code.Ripcord",
 }
 
-hook.Add( "SubtitleBase_EmitSubtitle","HL2SentenceSubtitlesModify", function(subtitle,ent)
-	local Map = MapNameCallOuts["default"]
-	local Suspect = SuspectNames["default"]
-	if string.find( MapName, "trainstation" ) then
-		Map = MapNameCallOuts["trainstation"]
-		Suspect = SuspectNames["trainstation"]
-	elseif string.find( MapName, "canals" ) then
-		Map = MapNameCallOuts["canals"]
-		Suspect = SuspectNames["canals"]
-	elseif string.find( MapName, "eli" ) then
-		Map = MapNameCallOuts["eli"]
-		Suspect = SuspectNames["eli"]
-	elseif string.find( MapName, "town" ) then
-		Map = MapNameCallOuts["town"]
-		Suspect = SuspectNames["town"]
-	elseif string.find( MapName, "coast" ) then
-		Map = MapNameCallOuts["coast"]
-		Suspect = SuspectNames["coast"]
-	elseif string.find( MapName, "prison" ) then
-		Map = MapNameCallOuts["prison"]
-		Suspect = SuspectNames["prison"]
-	elseif string.find( MapName, "c17" ) then
-		Map = MapNameCallOuts["c17"]
-		Suspect = SuspectNames["c17"]
-	elseif string.find( MapName, "citadel" ) then
-		Map = MapNameCallOuts["citadel"]
-		Suspect = SuspectNames["citadel"]
-	end
+hook.Add( "OnEntityCreated","HLSubtitlesModify_OnEntityCreate", function(ent)
+	local Class = ent:GetClass()
+	if Class != "npc_metropolice" and Class != "npc_combine_s" then return end
+	ent:SetNWInt( "HLSubtitle_MyKills", 0 )
+end)
 
+hook.Add( "OnNPCKilled","HLSubtitlesModify_OnNPCKilled", function( npc, attacker, inflictor )
+	attacker:SetNWInt( "HLSubtitle_MyKills", attacker:GetNWInt( "HLSubtitle_MyKills" ) + 1 )
+end)
+
+hook.Add( "SubtitleBase_EmitSubtitle","HL2SentenceSubtitlesModify", function(subtitle,ent)
 	local ModifiedSubtitle = subtitle.Text
-	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_LOCATION_MAP}", language.GetPhrase(Map[math.random( #Map )]) )
-	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_RND_NUM}",  function() return math.random(1,9) end )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_LOCATION_MAP}", language.GetPhrase(CurrentMapName) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_RND_NUM}", MapNumber )
 	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_MY_NAME}", language.GetPhrase(PoliceNames[math.random( #PoliceNames )]) )
 	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_MY_NUMBER}", math.random(1,9) )
 	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_RANDOM_CRIME}", language.GetPhrase(Crimes[math.random( #Crimes )]) )
-	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_SUSPECT_NAME}", language.GetPhrase(Suspect[math.random( #Suspect )]) )
+	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_SUSPECT_NAME}", language.GetPhrase(CurrentSuspect) )
 	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_PUNISH}", language.GetPhrase(Punishment[math.random( #Punishment )]) )
 	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_ACT}", function() return language.GetPhrase( Act[math.random( #Act )]) end)
 	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{P_DIST}", math.random(1,300) )
@@ -282,9 +296,8 @@ hook.Add( "SubtitleBase_EmitSubtitle","HL2SentenceSubtitlesModify", function(sub
 	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_DIST}", math.random(1,300) )
 	ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{S_DIR}", math.random(1,300) )
 	if string.find( ModifiedSubtitle,"{KILLS}" ) then
-		ent.Kills = ent.Kills or 0
-		ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{KILLS}", ent.Kills + 1 )
-		ent.Kills = ent.Kills + 1
+		if !IsValid(ent) then return end
+		ModifiedSubtitle = string.gsub( ModifiedSubtitle, "{KILLS}", ent:GetNWInt("HLSubtitle_MyKills") )
 	end
 	subtitle.Text = ModifiedSubtitle
 end)
